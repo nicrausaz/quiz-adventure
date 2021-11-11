@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  # Quizzes routes
+  get '/quizzes', to: 'quizzes#index'
+
+  # Questions routes
+  get '/questions/:theme', to: 'questions#bytheme'
 end
