@@ -1,8 +1,9 @@
 class Quiz
    include Mongoid::Document
-   store_in collection: 'quizzes'
 
-   field :shortname, type: String
+   # field :shortname, type: String
    field :image, type: String
    field :title, type: String
+
+   index({shortname: 1}, { unique: true})
 end
