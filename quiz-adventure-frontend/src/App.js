@@ -1,30 +1,25 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./views/Home"
 import Navbar from "./components/Navbar"
 import './App.css';
+import Quiz from "./views/Quiz";
 
 function App () {
   return (
     <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />} />
-        </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz/:id" element={<Quiz />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
 
-function About () {
+function NotFound () {
   return (
-    <>
-      <main>
-        <h2>Welcome to the about page!</h2>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
+    "Not found"
   )
 }
 
