@@ -9,6 +9,7 @@ import {
 import QuizCardsDisplayer from "../components/QuizCardsDisplayer"
 
 const Home = () => {
+
   return (
     <main className="wave-background">
       <Container maxW={'4xl'}>
@@ -33,7 +34,7 @@ const Home = () => {
         </Stack>
         <Stack spacing={20}>
           <Text fontSize="4xl">Quizzes populaires</Text>
-          <QuizCardsDisplayer></QuizCardsDisplayer>
+          <QuizCardsDisplayer withSearch={true}></QuizCardsDisplayer>
         </Stack>
       </Container>
     </main>
